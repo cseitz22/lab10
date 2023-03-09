@@ -53,7 +53,11 @@ summary(lm(score ~ bty_avg + gender, data = evals))
 
 Model: Evaluation Score = 3.75 + 0.074(Beauty Rating) + 0.17(Gender)
 
+### Exercise 3
 
+The evaluation score of a female with a beauty rating of 0 is 3.75. With each point increase in beauty rating, the model predicts a professor can add .074 points to their evaluation score. The model also predicts that males have evaluation scores .17 points higher than females. 
+
+### Exercise 4
 
 
 
