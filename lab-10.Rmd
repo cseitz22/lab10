@@ -1,7 +1,7 @@
 ---
 title: "Lab 10 - Grading the professor, Pt. 2"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Cat Seitz"
+date: "03.09.2023"
 output: github_document
 ---
 
@@ -11,17 +11,57 @@ output: github_document
 library(tidyverse) 
 library(tidymodels)
 library(openintro)
+library(broom)
 ```
+
+```{r see-data}
+
+evals<-evals
+
+```
+
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r fit-linear-model-beauty}
+
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ bty_avg, data = evals) %>%
+  tidy()
+
+summary(lm(score ~ bty_avg, data = evals))
+
+```
+
+Model: (Evaluation Score) = 3.88 + 0.067(Beauty Rating)
+
+The R2 was .035 and the adjusted R2 was .033
 
 ### Exercise 2
 
-...
+```{r multi-reg}
 
-Add exercise headings as needed.
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ bty_avg + gender, data = evals) %>%
+  tidy()
+
+summary(lm(score ~ bty_avg + gender, data = evals))
+
+```
+
+Model: Evaluation Score = 3.75 + 0.074(Beauty Rating) + 0.17(Gender)
+
+
+
+
+
+
+
+
+
+
+
+
+
