@@ -197,7 +197,7 @@ Based on my final model, the predicted highest evaluation score is awarded to a 
 
 ### Exercise 18
 
-
+I wouldn't necessarily want to generalize this model to all universities. This model could be affected by the type of university or the country it is in. So, before generalizing, we would want to make sure those factors don't make a difference in the model. For example, different countries may have different biases regarding gender, beauty, ethnicity, etc. Even different areas of the U.S. may show differences in these biases. 
 
 
 
