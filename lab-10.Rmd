@@ -63,7 +63,9 @@ Roughly 5.5% of variability in the professors' evaluation scores is explained by
 
 ### Exercise 5
 
+Line for just males: Evaluation score = 3.92 + 0.074(Beauty Rating)
 
+### Exercise 6
 
 
 
