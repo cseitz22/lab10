@@ -138,7 +138,20 @@ I would expect the number of students in the class who completed the evaluation 
 
 ### Exercise 12
 
+```{r num-students-model}
 
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ cls_did_eval, data = evals) %>%
+  tidy()
+
+summary(lm(score ~ cls_did_eval, data = evals))
+
+```
+
+Model: Evaluation Score = 4.15 + 0.0008(did eval)
+
+Seems like my suspicion was pretty good because the number of students in the class who completed the evaluation would be a horrible predictor of the evaluation score. 
 
 
 
