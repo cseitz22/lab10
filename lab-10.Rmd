@@ -67,7 +67,9 @@ Line for just males: Evaluation score = 3.92 + 0.074(Beauty Rating)
 
 ### Exercise 6
 
+Males tend to have higher evaluation scores given the same beauty rating. 
 
+### Exercise 7
 
 
 
