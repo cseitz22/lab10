@@ -40,7 +40,7 @@ The R2 was .035 and the adjusted R2 was .033
 
 ### Exercise 2
 
-```{r multi-reg}
+```{r multi-reg1}
 
 linear_reg() %>%
   set_engine("lm") %>%
@@ -82,6 +82,42 @@ The adjusted R2 increased by 0.022, suggesting gender is useful for explaining s
 The slope for m_bty_gen is higher than for m_bty, so adding gender to the model has changed the parameter estimate for the beuaty rating. 
 
 ### Exercise 10
+
+```{r multi-reg2}
+
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ bty_avg + rank, data = evals) %>%
+  tidy()
+
+summary(lm(score ~ bty_avg + rank, data = evals))
+
+```
+
+
+Model: Evaluation Score = 3.98 + 0.068(Beauty Rating) - 0.16(Tenure Track) - 0.13(Tenured)
+
+The intercept indicates the evaluation score of a teaching professor with a beauty rating of 0 (which is very unlikely). With each increase in point of beauty rating, the predicted evaluation score increases by .068 points. When predicting the score of a tenure track professor, the evaluation score decreases by .16 and of a tenured professor, decreases by .13. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
