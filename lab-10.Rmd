@@ -132,7 +132,11 @@ Model: Evaluation Score = 3.98 + 0.068(Beauty Rating) - 0.16(Tenure Track) - 0.1
 
 The intercept indicates the evaluation score of a teaching professor with a beauty rating of 0 (which is very unlikely). With each increase in point of beauty rating, the predicted evaluation score increases by .068 points. When predicting the score of a tenure track professor, the evaluation score decreases by .16 and of a tenured professor, decreases by .13. 
 
+### Exercise 11
 
+I would expect the number of students in the class who completed the evaluation to be the worst predictor of evaluation score because it seems completely irrelevant. At first, I was thinking percent of student who completed the evaluation to also be irrelevant, which still may be true, but I might expect that a higher percentage of evals completed to be from professors who are really good or really bad. Lastly, I also wouldn't necessarily suspect that the total number of students in the class, the number of professors to teach the class, or the number of credits to effect the evaluation score either, but there may be indirect reasons these would effect the rating. 
+
+### Exercise 12
 
 
 
