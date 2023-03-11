@@ -71,7 +71,40 @@ Males tend to have higher evaluation scores given the same beauty rating.
 
 ### Exercise 7
 
+```{r vary-by-gender}
 
+model<- lm(score ~ bty_avg * gender, data=evals)
+
+evals<- evals%>% 
+  mutate(fitted_values=fitted(model))
+
+ggplot(evals, aes(y = score, x=bty_avg, color=gender))+
+  geom_jitter()+
+  geom_line(aes(y=fitted_values))+
+  #stat_smooth(method="lm", color= "orange", se=FALSE)+
+  labs(title="Relationship between Score and Beauty", y="Evaluation Score", x="Average Beauty Rating")
+
+
+
+```
+
+Based on this plot, it looks like the beauty rating matters less for females than it does for males. 
+
+```{r gender-separation}
+
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ bty_avg, data = evals %>% filter(gender=="female")) %>%
+  tidy()
+
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ bty_avg, data = evals %>% filter(gender=="male")) %>%
+  tidy()
+
+```
+
+Running these models again and filtering the data for each gender, a 1 point increase in beauty rating for females increases the evaluation score by only 0.03; while for males, it increases the evaluation score by 0.11. 
 
 ### Exercise 8 
 
