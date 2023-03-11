@@ -59,6 +59,10 @@ The evaluation score of a female with a beauty rating of 0 is 3.75. With each po
 
 ### Exercise 4
 
+Roughly 5.5% of variability in the professors' evaluation scores is explained by the model. 
+
+### Exercise 5
+
 
 
 
