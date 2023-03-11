@@ -185,7 +185,7 @@ summary(lm(score ~ bty_avg + ethnicity + gender + cls_credits, data = evals))
 
 Using backward-selection, I've come to the following model: 
 
-Evaluation score = 3.51 + 0.082(Beauty rating) + 0.21(Ethnicity) + 0.15(Gender/Male) + 0.58(Number of Credits/1 credit)
+Evaluation score = 3.51 + 0.082(Beauty rating) + 0.21(Ethnicity/Non-minority) + 0.15(Gender/Male) + 0.58(Number of Credits/1 credit)
 
 ### Exercise 16 
 
@@ -193,7 +193,9 @@ With a 1 point increase in beauty rating, the model predicts a professor will ga
 
 ### Exercise 17
 
+Based on my final model, the predicted highest evaluation score is awarded to a non-minority, male professor with a high beauty rating that is teaching a 1 credit course. 
 
+### Exercise 18
 
 
 
