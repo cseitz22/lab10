@@ -187,7 +187,11 @@ Using backward-selection, I've come to the following model:
 
 Evaluation score = 3.51 + 0.082(Beauty rating) + 0.21(Ethnicity) + 0.15(Gender/Male) + 0.58(Number of Credits/1 credit)
 
+### Exercise 16 
 
+With a 1 point increase in beauty rating, the model predicts a professor will gain .082 points in evaluation score. A 1 credit course is predicted to get .58 points higher in evaluation score than a mulit-credit course. 
+
+### Exercise 17
 
 
 
