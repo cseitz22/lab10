@@ -153,7 +153,11 @@ Model: Evaluation Score = 4.15 + 0.0008(did eval)
 
 Seems like my suspicion was pretty good because the number of students in the class who completed the evaluation would be a horrible predictor of the evaluation score. 
 
+### Exercise 13
 
+We shouldn't include cls_did_eval if we are already including cls_perc_eval and Cls_students because then we would be redundant. 
+
+### Exercise 14
 
 
 
