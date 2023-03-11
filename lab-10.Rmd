@@ -155,12 +155,22 @@ Seems like my suspicion was pretty good because the number of students in the cl
 
 ### Exercise 13
 
-We shouldn't include cls_did_eval if we are already including cls_perc_eval and Cls_students because then we would be redundant. 
+We shouldn't include cls_did_eval if we are already including cls_perc_eval and cls_students because then we would be redundant. 
 
 ### Exercise 14
 
+```{r full-model}
 
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ rank + bty_avg + ethnicity + gender + language + age + cls_perc_eval + cls_students + cls_level + cls_profs + cls_credits, data = evals) %>%
+  tidy()
 
+summary(lm(score ~ rank + bty_avg + ethnicity + gender + language + age + cls_perc_eval + cls_students + cls_level + cls_profs + cls_credits, data = evals))
+
+```
+
+### Exercise 15
 
 
 
