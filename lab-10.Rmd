@@ -172,9 +172,20 @@ summary(lm(score ~ rank + bty_avg + ethnicity + gender + language + age + cls_pe
 
 ### Exercise 15
 
+```{r final-model}
 
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(score ~ bty_avg + ethnicity + gender + cls_credits, data = evals) %>%
+  tidy()
 
+summary(lm(score ~ bty_avg + ethnicity + gender + cls_credits, data = evals))
 
+```
+
+Using backward-selection, I've come to the following model: 
+
+Evaluation score = 3.51 + 0.082(Beauty rating) + 0.21(Ethnicity) + 0.15(Gender/Male) + 0.58(Number of Credits/1 credit)
 
 
 
