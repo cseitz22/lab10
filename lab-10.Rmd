@@ -73,6 +73,16 @@ Males tend to have higher evaluation scores given the same beauty rating.
 
 
 
+### Exercise 8 
+
+The adjusted R2 increased by 0.022, suggesting gender is useful for explaining some of the variance in evaluation scores. 
+
+### Exercise 9
+
+The slope for m_bty_gen is higher than for m_bty, so adding gender to the model has changed the parameter estimate for the beuaty rating. 
+
+### Exercise 10
+
 
 
 
